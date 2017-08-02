@@ -73,6 +73,9 @@ function renderGraph() {
           return "node " + d.label
         })
         .attr("r", 10)
+        .on("click", d => {
+          showMovie(d.title);
+        })
         .call(force.drag);
 
       // html title attribute
